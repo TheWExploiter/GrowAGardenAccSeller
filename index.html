@@ -1,10 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Grow a Garden - Account Seller</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e2f;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input[type="text"] {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .discord-button {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #5865F2;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .discord-button:hover {
+      background-color: #4752C4;
+    }
+
+    .account-list {
+      margin-top: 30px;
+      text-align: left;
+      background-color: #2f2f40;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .account {
+      margin: 10px 0;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -14,6 +87,9 @@
     <input type="text" id="discordUser" placeholder="Discord Username (e.g. Nugget#0001)" />
     <input type="text" id="robloxUser" placeholder="Roblox Username" />
     <button onclick="submitForm()">Buy Account</button>
+
+    <!-- Join Discord Button -->
+    <a href="https://discord.gg/K5xnX6euS3" class="discord-button" target="_blank">Join Discord</a>
 
     <div id="result"></div>
 
@@ -26,7 +102,6 @@
 
     <p class="footer">© 2025 Grow a Garden Seller</p>
   </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
