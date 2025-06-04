@@ -1,4 +1,3 @@
-
 function submitForm() {
   const discordUser = document.getElementById("discordUser").value.trim();
   const robloxUser = document.getElementById("robloxUser").value.trim();
@@ -15,7 +14,11 @@ function submitForm() {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      content: `✅ New purchase!\nDiscord: ${discordUser}\nRoblox: ${robloxUser}`
+      content: `<@1352007336490827888> ✅ New purchase!\nDiscord: ${discordUser}\nRoblox: ${robloxUser}`,
+      allowed_mentions: {
+        parse: ["users"],
+        users: ["123456789012345678"]
+      }
     })
   })
   .then(() => {
