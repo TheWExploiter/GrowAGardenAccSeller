@@ -14,17 +14,42 @@ function submitForm() {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      content: `<@1352007336490827888> ✅ New purchase!\nDiscord: ${discordUser}\nRoblox: ${robloxUser}`,
+      content: "<@1352007336490827888>",
       allowed_mentions: {
-        parse: ["users"],
-        users: ["123456789012345678"]
-      }
+        users: ["1352007336490827888"]
+      },
+      embeds: [
+        {
+          title: "✅ New Account Purchase",
+          color: 0x00ff88,
+          fields: [
+            {
+              name: "Discord Username",
+              value: discordUser,
+              inline: true
+            },
+            {
+              name: "Roblox Username",
+              value: robloxUser,
+              inline: true
+            }
+          ],
+          footer: {
+            text: "🌱 Grow a Garden Seller System"
+          },
+          timestamp: new Date().toISOString()
+        }
+      ]
     })
   })
-  .then(() => {
-    result.innerText = "✅ Purchase logged! Check Discord for account details.";
+  .then(res => {
+    if (res.ok) {
+      result.innerText = "✅ Purchase logged! Check Discord.";
+    } else {
+      result.innerText = "❌ Webhook failed.";
+    }
   })
   .catch(() => {
-    result.innerText = "❌ Failed to send data.";
+    result.innerText = "❌ Failed to send (maybe CORS error).";
   });
 }
