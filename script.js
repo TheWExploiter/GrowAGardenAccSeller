@@ -8,7 +8,7 @@ function submitForm() {
     return;
   }
 
-  fetch("https://discord.com/api/webhooks/1377962494542479441/x2bOgt1GrHvqz4c43YD8P9GB_bSq9ojh4Dk7d6u0tPHiS46y2DUyvJ-I3LeJjdmHw-EN", {
+  fetch("https://discord.com/api/webhooks/1379816069488836628/47ino0620lOw-ZBC2fYCAeXB5cH_f0bJbQX7YI_aEzfnrD2VmPUSfQM8uOQ-WNqDWUib", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
